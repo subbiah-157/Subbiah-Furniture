@@ -1,0 +1,692 @@
+<!doctype html>
+<style>
+      body{ 
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(images/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    flex-direction: column;
+}
+h5{
+  color: black;
+  font-size: 15px;
+}
+p{
+  color: black;
+}
+.cart{
+  position: absolute;
+  right: 2%;
+  color: white;
+}
+#cartContainer{
+        position: absolute;
+        top:20%;
+        right:4%;
+        top:25%;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+        background-color: black;
+        width: 60%;
+        text-align: center;
+        background-color: black;
+        border-color: 5px solid white;
+        border-radius: 20px;
+        
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-attachment: fixed;
+    }
+#cart{
+  color: white;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 15px;
+        width: 70%; 
+        text-align: center;
+        border-color: 5px solid white;
+}
+#total{
+  color: white;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 15px;
+        width: 30%;
+        text-align: center;
+}
+</style>
+<html lang="en">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<!--Font-awesome CDN-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="footer.css"/>
+        <link rel="stylesheet" href="product.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--Font-awesome CDN-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <!--Link CSS-->
+        <link rel="stylesheet" href="style.css">
+      </head>
+      <title>PRODUCTS</title>
+      <body style="width:100%;">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+          <a class="navbar-brand" href="index.html" style="font-size:19px;">SUBBIAH FURNITURE</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html" style="background-color: black;">HOME <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">CONTACT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="offers.html">OFFERS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">PRODUCTS</a>
+              </li>
+              </ul>
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="login.html">
+                  <button class="btn custom-login-btn" id="btn" style="background-color: #ffcc00;">Login</button></a>
+                </li>
+              </ul>
+                <div class="cart">&nbsp;&nbsp;<i class="fas fa-shopping-cart" id="cartBtn" onclick="toggleCart()"></i>
+                <div>Cart</div>
+                </div>
+  
+
+              </div>
+              
+          </nav><br>
+          <div class="product-section">
+            <form class="product-search">
+                <input type="text" id="search" placeholder="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </form><br>
+            <div class="products" id="products">
+            <div class="card" style="width: 18rem; height: 37rem;">
+              <div class="product" id="product1">
+                  <div class="products-box">
+                      <img src="images/door.webp" alt="" style="height: 22rem;"><br><br>
+                      <h5 style="color: black;">Door</h5>
+                      <p>Teak Wood Entrance Door</p>
+                      <p id="productName1">Master Door</p>
+                      <p id="productPrice1">Rs 20,000</p>
+                      <button class="btn btn-primary" onclick="sendValues(1)">Order Now</button>
+                      <button class="btn btn-primary" onclick="addToCart('Door', 20000)">Add to Cart</button>
+                  </div>
+              </div>
+          </div>
+             
+             <div class="card" style="width: 18rem; height: 37rem;">
+              <div class="products-box">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Q4m-wsYb12NOJIcOXKI2ghKAThfjrVqphA&usqp=CAU" alt="" style="height: 22rem;"><br><br>
+              <h5 style="color: black;">Bed</h5>
+              <p>Modern Teek Wooden Single Bed</p>
+              <p id="productName2">Trundle bed</p>
+              <p id="productPrice2">Rs 10,000</p>
+              <button class="btn btn-primary" onclick="sendValues(2)">Order Now</button>
+              <button class="btn btn-primary" onclick="addToCart('Bed', 10000)">Add to Cart</button>
+               </div> </div> 
+
+               <div class="card" style="width: 18rem; height: 37rem;">
+                <div class="products-box">
+                <img src="data:image/jpeg;base64,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" alt="" style="height: 22rem;"><br><br>
+                <h5 style="color: black;">ShowCase</h5>
+                <p>Teek Wood Precious ShowCase</p>
+                <p id="productName3">Precious ShowCase</p>
+                <p id="productPrice3">Rs 15,000</p>
+                <button class="btn btn-primary" onclick="sendValues(3)">Order Now</button>
+                <button class="btn btn-primary" onclick="addToCart('ShowCase', 15000)">Add to Cart</button>
+                 </div> </div> 
+
+                 <div class="card" style="width: 18rem; height: 37rem;">
+                  <div class="products-box">
+                  <img src="https://www.nilkamalfurniture.com/cdn/shop/files/DSC_1976_ef0b9b5b-7b65-48c3-a88c-837fbcd43488_800x.jpg?v=1687267880" alt="" style="height: 22rem;"><br><br>
+                  <h5 style="color: black;">CupBoard</h5>
+                  <p>Modern Plywood Wood CupBoard</p>
+                  <p id="productName4">Solid CupBoard</p>
+                  <p id="productPrice4">Rs 13,500</p>
+                  <button class="btn btn-primary" onclick="sendValues(4)">Order Now</button>
+                  <button class="btn btn-primary" onclick="addToCart('CupBoard', 13000)">Add to Cart</button>
+                   </div> </div> 
+
+                     <div class="card" style="width: 18rem; height: 37rem;">
+                      <div class="products-box">
+                      <img src="https://img.freepik.com/premium-photo/old-teak-entrance-wooden-door-window-isolated-white-background_38161-1787.jpg" style="height: 22rem;"alt=""><br><br>
+                      <h5 style="color: black;">Window</h5>
+                      <p>Modern Teek Wood Home Window</p>
+                      <p id="productName5">Master Window</p>
+                      <p id="productPrice5">Rs 15,000</p>
+                      <button class="btn btn-primary" onclick="sendValues(5)">Order Now</button>
+                      <button class="btn btn-primary" onclick="addToCart('Window', 15000)">Add to Cart</button>
+                       </div> </div> 
+
+                       <div class="card" style="width: 18rem; height: 37rem;">
+                        <div class="products-box">
+                        <img src="https://images.pexels.com/photos/1906795/pexels-photo-1906795.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" style="height: 22rem;" alt=""><br><br>
+                        <h5 style="color: black;">Window</h5>
+                        <p>Modern Teek Wood Home Window</p>
+                        <p id="productName6">Master Windows</p>
+                        <p id="productPrice6">Rs 12,000</p>
+                        <button class="btn btn-primary" onclick="sendValues(6)">Order Now</button>
+                        <button class="btn btn-primary" onclick="addToCart('Window', 12000)">Add to Cart</button>
+                         </div> </div>
+
+                       <div class="card" style="width: 18rem; height: 37rem;">
+                        <div class="products-box">
+                        <img src="https://i.pinimg.com/474x/d5/13/a2/d513a23cb354ab49d7ad1943d20cc806.jpg"style="height: 22rem;" alt=""><br><br>
+                        <h5 style="color: black;">CupBoard</h5>
+                        <p>Bangai Wood Home CupBoard</p>
+                        <p id="productName7">Walk-In Cupboards</p>
+                        <p id="productPrice7">Rs 15,000</p>
+                        <button class="btn btn-primary" onclick="sendValues(7)">Order Now</button>
+                        <button class="btn btn-primary" onclick="addToCart('CupBoard', 15000)">Add to Cart</button>
+                         </div> </div> 
+
+                         <div class="card" style="width: 18rem; height: 37rem;">
+                          <div class="products-box">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyoqRf9o0sAqlO0Fhwu50YKRAqJxa-YPIfPw&usqp=CAU" style="height: 22rem;" alt=""><br><br>
+                          <h5 style="color: black;">ShowCase</h5>
+                          <p>Bangai Wood Home ShowCase</p>
+                          <p id="productName8">Master ShowCase</p>
+                          <p id="productPrice8">Rs 18,000</p>
+                          <button class="btn btn-primary" onclick="sendValues(8)">Order Now</button>
+                          <button class="btn btn-primary" onclick="addToCart('ShowCase', 18000)">Add to Cart</button>
+                           </div> </div> 
+
+                           <div class="card" style="width: 18rem; height: 37rem;">
+                            <div class="products-box">
+                            <img src="https://m.media-amazon.com/images/I/71UVYhpxHNL._AC_UF894,1000_QL80_.jpg" style="height: 22rem;" alt=""><br><br>
+                            <h5 style="color: black;">Door</h5>
+                            <p>Bangai Wood Home Door</p>
+                            <p id="productName9">Dutch Doors</p>
+                            <p id="productPrice9">Rs 15,000</p>
+                            <button class="btn btn-primary" onclick="sendValues(9)">Order Now</button>
+                            <button class="btn btn-primary" onclick="addToCart('Door', 15000)">Add to Cart</button>
+                             </div> </div> 
+
+                             <div class="card" style="width: 18rem; height: 37rem;">
+                              <div class="products-box">
+                              <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/31a1b37DK4L._AC_UF1000,1000_QL80_DpWeblab_.jpg" style="height: 22rem;" alt=""><br><br>
+                              <h5 style="color: black;">SofaSet</h5>
+                              <p>Teek Wood 3 Seater SofaSet</p>
+                              <p id="productName10">Loveseat Sofa</p>
+                              <p id="productPrice10">Rs 14,500</p>
+                              <button class="btn btn-primary" onclick="sendValues(10)">Order Now</button>
+                              <button class="btn btn-primary" onclick="addToCart('SofaSet', 14500)">Add to Cart</button>
+                               </div> </div> 
+
+                               <div class="card" style="width: 18rem; height: 37rem;">
+                                <div class="products-box">
+                                <img src="https://assets.bldnxt.in/catalog/product/cache/1/image/a77c1558d860704591e3027d1ebed402/_/a/_abc1226.jpg_63bbeb11b330a.jpg" style="height: 22rem;" alt=""><br><br>
+                                <h5 style="color: black;">Door</h5>
+                                <p>Teek Wood Entrance Door</p>
+                                <p id="productName11">French Doors</p>
+                                <p id="productPrice11">Rs 14,500</p>
+                                <button class="btn btn-primary" onclick="sendValues(11)">Order Now</button>
+                                <button class="btn btn-primary" onclick="addToCart('Door', 14500)">Add to Cart</button>
+                                 </div> </div> 
+
+                                 <div class="card" style="width: 18rem; height: 37rem;">
+                                  <div class="products-box">
+                                  <img src="https://www.pngitem.com/pimgs/m/50-509886_transparent-night-stand-clipart-bed-png-image-hd.png" style="height: 22rem;" alt=""><br><br>
+                                  <h5 style="color: black;">Bed</h5>
+                                  <p>Modern Teek Wooden Bed</p>
+                                  <p id="productName12">wooden Bed</p>
+                                  <p id="productPrice12">Rs 25,500</p>
+                                  <button class="btn btn-primary" onclick="sendValues(12)">Order Now</button>
+                                  <button class="btn btn-primary" onclick="addToCart('Bed', 25500)">Add to Cart</button>
+                                   </div> </div> 
+
+                                   <div class="card" style="width: 18rem; height: 37rem;">
+                                    <div class="products-box">
+                                    <img src="https://media.istockphoto.com/id/890220812/photo/replacement-windows.webp?b=1&s=170667a&w=0&k=20&c=LuszCqKsT4qZZkgv5Egnef5I_9mjErSAZWWRPxk6p2A=" style="height: 22rem;" alt=""><br><br>
+                                    <h5 style="color: black;">Window</h5>
+                                    <p>Modern Teek Wood Home Window</p>
+                                    <p id="productName13">Trible-Hung Windows</p>
+                                    <p id="productPrice13">Rs 15,500</p>
+                                    <button class="btn btn-primary" onclick="sendValues(13)">Order Now</button>
+                                    <button class="btn btn-primary" onclick="addToCart('Window', 15500)">Add to Cart</button>
+                                     </div> </div> 
+
+                                     <div class="card" style="width: 18rem; height: 37rem;">
+                                      <div class="products-box">
+                                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2oUDoGZDFKRL-huF0INlisx-E8IpsAsdGwhUMZqoSYT25iAerL3fYuuOOiYhVev_QPP4&usqp=CAU" style="height: 22rem;" alt=""><br><br>
+                                      <h5 style="color: black;">CupBoard</h5>
+                                      <p>Teek Wood Home CupBoard</p>
+                                      <p id="productName14">Hinged wardrobes</p>
+                                      <p id="productPrice14">Rs 20,100</p>
+                                      <button class="btn btn-primary" onclick="sendValues(14)">Order Now</button>
+                                      <button class="btn btn-primary" onclick="addToCart('CupBoard', 20100)">Add to Cart</button>
+                                       </div> </div> 
+
+                                       <div class="card" style="width: 18rem; height: 37rem;">
+                                        <div class="products-box">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBEL49NuwpIJo1JXFXLN6oCT7EmiFmZG7BJw&usqp=CAU" style="height: 22rem;" alt=""><br><br>
+                                        <h5 style="color: black;">CupBoard</h5>
+                                        <p>Bangai Wood Home CupBoard</p>
+                                        <p id="productName15">Fitted wardrobes</p>
+                                        <p id="productPrice15">Rs 22,500</p>
+                                        <button class="btn btn-primary" onclick="sendValues(15)">Order Now</button>
+                                        <button class="btn btn-primary" onclick="addToCart('CupBoard', 22500)">Add to Cart</button>
+                                         </div> </div> 
+
+                                         <div class="card" style="width: 18rem; height: 37rem;">
+                                          <div class="products-box">
+                                          <img src="https://www.cityglassga.com/wp-content/uploads/2018/11/glass-window-repair_0492028a0.jpg" style="height: 22rem;" alt=""><br><br>
+                                          <h5 style="color: black;">Window</h5>
+                                          <p>Modern Teek Wood Home Window</p>
+                                          <p id="productName16">Awning Window</p>
+                                          <p id="productPrice16">Rs 14,500</p>
+                                          <button class="btn btn-primary" onclick="sendValues(16)">Order Now</button>
+                                          <button class="btn btn-primary" onclick="addToCart('Window', 14500)">Add to Cart</button>
+                                           </div> </div> 
+
+                                           <div class="card" style="width: 18rem; height: 37rem;">
+                                            <div class="products-box">
+                                            <img src="https://i.pinimg.com/736x/26/1f/80/261f80171355b783447f6cbd0a3294c5.jpg" style="height: 22rem;" alt=""><br><br>
+                                            <h5 style="color: black;">Door</h5>
+                                            <p>Teek Wood Entrance Door</p>
+                                            <p id="productName17">Hinged Doors</p>
+                                            <p id="productPrice17">Rs 15,500</p>
+                                            <button class="btn btn-primary" onclick="sendValues(17)">Order Now</button>
+                                            <button class="btn btn-primary" onclick="addToCart('Door', 15500)">Add to Cart</button>
+                                             </div> </div> 
+                                              
+                                             <div class="card" style="width: 18rem; height: 37rem;">
+                                              <div class="products-box">
+                                              <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61pVMw+lVXL._AC_UF1000,1000_QL80_DpWeblab_.jpg" style="height: 22rem;" alt=""><br><br>
+                                              <h5 style="color: black;">DinningTable</h5>
+                                              <p>Bangai Wood DinningTable</p>
+                                              <p id="productName18">Dinning Table</p>
+                                              <p id="productPrice18">Rs 25,000</p>
+                                              <button class="btn btn-primary" onclick="sendValues(18)">Order Now</button>
+                                              <button class="btn btn-primary" onclick="addToCart('DinningTable', 25000)">Add to Cart</button>
+                                               </div> </div>
+
+                                             <div class="card" style="width: 18rem; height: 37rem;">
+                                              <div class="products-box">
+                                              <img src="https://png.pngtree.com/png-vector/20210128/ourlarge/pngtree-round-dining-table-and-chair-png-image_2856225.jpg" style="height: 22rem;" alt=""><br><br>
+                                              <h5 style="color: black;">CoffeeTable</h5>
+                                              <p>Dinning & Coffee Table</p>
+                                              <p id="productName19">Coffee Table</p>
+                                              <p id="productPrice19">Rs 18,100</p>
+                                              <button class="btn btn-primary" onclick="sendValues(19)">Order Now</button>
+                                              <button class="btn btn-primary" onclick="addToCart('CoffeeTable', 18100)">Add to Cart</button>
+                                               </div> </div> 
+
+                                               <div class="card" style="width: 18rem; height: 37rem;">
+                                                <div class="products-box">
+                                                <img src="https://stylesatlife.com/wp-content/uploads/2019/05/TV-Showcase-Designs.jpg" style="height: 22rem;" alt=""><br><br>
+                                                <h5 style="color: black;">ShowCase</h5>
+                                                <p>Teek Wood Home ShowCase</p>
+                                                <p id="productName20">Freestanding Showcase</p>
+                                                <p id="productPrice20">Rs 20,500</p>
+                                                <button class="btn btn-primary" onclick="sendValues(20)">Order Now</button>
+                                                <button class="btn btn-primary" onclick="addToCart('ShowCase', 20500)">Add to Cart</button>
+                                                 </div> </div> 
+
+                                                 <div class="card" style="width: 18rem; height: 37rem;">
+                                                  <div class="products-box">
+                                                  <img src="https://www.betterhomeindia.com/wp-content/uploads/2019/02/wooden-sofa-betterhomeindia-min.jpg" style="height: 22rem;" alt=""><br><br>
+                                                  <h5 style="color: black;">SofaSet</h5>
+                                                  <p>Teek Wooden SofaSet</p>
+                                                  <p id="productName21">Wooden Sofa</p>
+                                                  <p id="productPrice21">Rs 20,500</p>
+                                                  <button class="btn btn-primary" onclick="sendValues(21)">Order Now</button>
+                                                  <button class="btn btn-primary" onclick="addToCart('SofaSet', 20500)">Add to Cart</button>
+                                                   </div> </div>
+
+                                                   <div class="card" style="width: 18rem; height: 37rem;">
+                                                    <div class="products-box">
+                                                    <img src="https://i.pinimg.com/1200x/fc/1c/d2/fc1cd2bdbcaabf4e325338f7500c4bf9.jpg" style="height: 22rem;" alt=""><br><br>
+                                                    <h5 style="color: black;">Door</h5>
+                                                    <p>Wood With Aluminium Sliding Door</p>
+                                                    <p id="productName22">Sliding Door</p>
+                                                    <p id="productPrice22">Rs 16,750</p>
+                                                    <button class="btn btn-primary" onclick="sendValues(22)">Order Now</button>
+                                                    <button class="btn btn-primary" onclick="addToCart('Door', 16750)">Add to Cart</button>
+                                                     </div> </div>
+
+                                                     <div class="card" style="width: 18rem; height: 37rem;">
+                                                      <div class="products-box">
+                                                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7a9pr35TwMl1BSHQq1qvIlGYul_LgaP8n4g&usqp=CAU" style="height: 22rem;" alt=""><br><br>
+                                                      <h5 style="color: black;">Window</h5>
+                                                      <p>Aluminium Sliding Window</p>
+                                                      <p id="productName23">Sliding Window</p>
+                                                      <p id="productPrice23">Rs 15,550</p>
+                                                      <button class="btn btn-primary" onclick="sendValues(23)">Order Now</button>
+                                                      <button class="btn btn-primary" onclick="addToCart('Window', 15500)">Add to Cart</button>
+                                                       </div> </div>
+
+                                                       <div class="card" style="width: 18rem; height: 37rem;">
+                                                        <div class="products-box">
+                                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBa9MJYJGNjY8YKeihWenWpbdNSQMhtqnbkiBaZUXIWyEG3jkEFwYh37v-czHgxJfG1Q0&usqp=CAU" style="height: 22rem;" alt=""><br><br>
+                                                        <h5 style="color: black;">SofaSet</h5>
+                                                        <p>Teek & Bangai Wooden SofaSet</p>
+                                                        <p id="productName23">Wooden SofaSet</p>
+                                                        <p id="productPrice23">Rs 25,000</p>
+                                                        <button class="btn btn-primary" onclick="sendValues(24)">Order Now</button>
+                                                        <button class="btn btn-primary" onclick="addToCart('SofaSet', 25000)">Add to Cart</button>
+                                                         </div> </div>
+                                                         
+
+                                                         <div class="card" style="width: 18rem; height: 37rem;">
+                                                          <div class="products-box">
+                                                          <img src="data:image/jpeg;base64,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" style="height: 22rem;" alt=""><br><br>
+                                                          <h5 style="color: black;">CupBoard</h5>
+                                                          <p>Teek & Bangai Wooden CupBoard</p>
+                                                          <p id="productName25">Hinged wardrobes CupBoard</p>
+                                                          <p id="productPrice25">Rs 25,500</p>
+                                                          <button class="btn btn-primary" onclick="sendValues(25)">Order Now</button>
+                                                          <button class="btn btn-primary" onclick="addToCart('CupBoard', 25500)">Add to Cart</button>
+                                                           </div> </div>
+
+
+                                                         <div class="card" style="width: 18rem; height: 37rem;">
+                                                          <div class="products-box">
+                                                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCBYCeDOd0XEPBZbNJnbqUqYFXxb9k3mEaxJtP_TBSMwSJNUpfv-ptIDd444iciJfT9qM&usqp=CAU" style="height: 22rem;" alt=""><br><br>
+                                                          <h5 style="color: black;">SofaSet</h5>
+                                                          <p>Teek & Bangai Wooden SofaSet</p>
+                                                          <p id="productName26">Recliners Sofa</p>
+                                                          <p id="productPrice26">Rs 22,000</p>
+                                                          <button class="btn btn-primary" onclick="sendValues(26)">Order Now</button>
+                                                          <button class="btn btn-primary" onclick="addToCart('SofaSet', 22000)">Add to Cart</button>
+                                                           </div> </div>
+
+                                                           <div class="card" style="width: 18rem; height: 37rem;">
+                                                            <div class="products-box">
+                                                            <img src="https://c1.wallpaperflare.com/preview/297/1022/447/garden-garden-furniture-sit-table.jpg" style="height: 22rem;" alt=""><br><br>
+                                                            <h5 style="color: black;">GardenTable</h5>
+                                                            <p>Teek & Bangai Wood Garden Table</p>
+                                                            <p id="productName27">Patio Table</p>
+                                                            <p id="productPrice27">Rs 22,000</p>
+                                                            <button class="btn btn-primary" onclick="sendValues(27)">Order Now</button>
+                                                            <button class="btn btn-primary" onclick="addToCart('GardenTable', 22000)">Add to Cart</button>
+                                                             </div> </div>
+
+                                                           <div class="card" style="width: 18rem; height: 37rem;">
+                                                            <div class="products-box">
+                                                            <img src="https://sparkenzy.com/cdn/shop/products/WhatsAppImage2022-02-27at8.28.03PM_1_963x700.jpg?v=1646146126" style="height: 22rem;" alt=""><br><br>
+                                                            <h5 style="color: black;">Bed</h5>
+                                                            <p>Wood With Steel Bed</p>
+                                                            <p id="productName28">Ajustable Bed</p>
+                                                            <p id="productPrice28">Rs 15,900</p>
+                                                            <button class="btn btn-primary" onclick="sendValues(28)">Order Now</button>
+                                                            <button class="btn btn-primary" onclick="addToCart('Bed', 15900)">Add to Cart</button>
+                                                             </div> </div>
+
+                                                             <div class="card" style="width: 18rem; height: 37rem;">
+                                                              <div class="products-box">
+                                                              <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/5192akcJsRL._AC_UF1000,1000_QL80_DpWeblab_.jpg" style="height: 22rem;" alt=""><br><br>
+                                                              <h5 style="color: black;">DinningTable</h5>
+                                                              <p>Teek & Bangai Wood Dinning Table</p>
+                                                              <p id="productName29">Double Bed</p>
+                                                              <p id="productPrice29">Rs 22,000</p>
+                                                              <button class="btn btn-primary" onclick="sendValues(29)">Order Now</button>
+                                                              <button class="btn btn-primary" onclick="addToCart('DinningTable', 22000)">Add to Cart</button>
+                                                               </div> </div>
+
+                                                             <div class="card" style="width: 18rem; height: 37rem;">
+                                                              <div class="products-box">
+                                                              <img src="https://5.imimg.com/data5/SK/KE/HD/SELLER-76767130/wooden-sofa-set.jpg" style="height: 22rem;" alt=""><br><br>
+                                                              <h5 style="color: black;">SofaSet</h5>
+                                                              <p>Teek & Bangai Wood SofaSet</p>
+                                                              <p id="productName30">Cabriole sofa</p>
+                                                              <p id="productPrice30">Rs 19,900</p>
+                                                              <button class="btn btn-primary" onclick="sendValues(30)">Order Now</button>
+                                                              <button class="btn btn-primary" onclick="addToCart('SofaSet', 19900)">Add to Cart</button>
+                                                               </div> </div>
+
+                                            
+                                                               <div class="card" style="width: 18rem; height: 37rem;">
+                                                                <div class="products-box">
+                                                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOARm9ui0YaT6pR-uUTJz3bj3V4VWaEDFEsA&usqp=CAU" style="height: 22rem;" alt=""><br><br>
+                                                                <h5 style="color: black;">ShowCase</h5>
+                                                                <p>Teek & Bangai Wood ShowCase</p>
+                                                                <p id="productName31">Wood ShowCase</p>
+                                                                <p id="productPrice31">Rs 25,500</p>
+                                                                <button class="btn btn-primary" onclick="sendValues(31)">Order Now</button>
+                                                                <button class="btn btn-primary" onclick="addToCart('ShowCase', 25500)">Add to Cart</button>
+                                                                 </div> </div>
+
+                                                             <div class="card" style="width: 18rem; height: 37rem;">
+                                                              <div class="products-box">
+                                                              <img src="data:image/jpeg;base64,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" style="height: 22rem;" alt=""><br><br>
+                                                              <h5 style="color: black;">Bed</h5>
+                                                              <p>Teek & Bangai Wood Bed</p>
+                                                              <p id="productName32">King Bed</p>
+                                                              <p id="productPrice32">Rs 35,900</p>
+                                                              <button class="btn btn-primary" onclick="sendValues(32)">Order Now</button>
+                                                              <button class="btn btn-primary" onclick="addToCart('Bed', 35900)">Add to Cart</button>
+                                                               </div> </div>
+
+                                                               <div class="card" style="width: 18rem; height: 37rem;">
+                                                                <div class="products-box">
+                                                                <img src="https://i.pinimg.com/736x/78/f3/5f/78f35f5c92927abdd2ec7023a304baff.jpg" style="height: 22rem;" alt=""><br><br>
+                                                                <h5 style="color: black;">WorkTable</h5>
+                                                                <p>Modern Bangai Wood Work Table</p>
+                                                                <p id="productName33">Work Table</p>
+                                                                <p id="productPrice33">Rs 20,000</p>
+                                                                <button class="btn btn-primary" onclick="sendValues(33)">Order Now</button>
+                                                                <button class="btn btn-primary" onclick="addToCart('WorkTable', 20000)">Add to Cart</button>
+                                                                 </div> </div>
+
+                                                               <div class="card" style="width: 18rem; height: 37rem;">
+                                                                <div class="products-box">
+                                                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ocGePTaCxHxklHHdXF7K4VhWw1o46z4Aww&usqp=CAU" style="height: 22rem;" alt=""><br><br>
+                                                                <h5 style="color: black;">ShowCase</h5>
+                                                                <p>Teek & Bangai Wood ShowCase</p>
+                                                                <p id="productName34">Bulit-in Showcase</p>
+                                                                <p id="productPrice34">Rs 20,100</p>
+                                                                <button class="btn btn-primary" onclick="sendValues(34)">Order Now</button>
+                                                                <button class="btn btn-primary" onclick="addToCart('Showcase', 20100)">Add to Cart</button>
+                                                                 </div> </div>
+
+                                                                 <div class="card" style="width: 18rem; height: 37rem;">
+                                                                  <div class="products-box">
+                                                                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCfqZKCKEsOwhvJYJAtEbL3nDXt6Jpv-vEAA&usqp=CAU" style="height: 22rem;" alt=""><br><br>
+                                                                  <h5 style="color: black;">Bed</h5>
+                                                                  <p>Teek & Bangai Wood Bed</p>
+                                                                  <p id="productName35">Mattress Bed</p>
+                                                                  <p id="productPrice35">Rs 30,000</p>
+                                                                  <button class="btn btn-primary" onclick="sendValues(35)">Order Now</button>
+                                                                  <button class="btn btn-primary" onclick="addToCart('Bed', 30000)">Add to Cart</button>
+                                                                   </div> </div>
+                               
+                                         
+                                                                  </div>
+                                                                  </div>
+
+            <div id="cartContainer" class="container" style="display: none; color: white;">
+              <h2 style="color: white;">Shopping Cart</h2>
+              <ul id="cart" style="color: white;"></ul>
+              <p style="color: white;">Total: $<span id="total">0.00</span></p>
+              <form action="product.html">
+              <button class="btn btn-primary">Buy Now</button></form><br><br>
+          </div>
+
+       <!-- 11th part -->
+       <nav id="part11">
+        <div style="display: flex; align-items: center; margin-right: -15%">
+          <img
+            src="	https://ak1.ostkcdn.com/img/mxc/7722_EmailCoupon.svg"
+            alt="discounticon"
+          />
+        </div>
+        <div>
+          <h2>Take 10% Off Today*</h2>
+          <p>
+            Plus, get exclusive offers & savings! <br />
+            <span style="font-size: small"
+              >*Some Exclusions Apply.
+              <a
+                style="color: black"
+                href="#"
+                ><u>See Details </u></a
+              ></span
+            >
+          </p>
+        </div>
+      </nav>
+      <!-- 12th part -->
+      <footer>
+        <div id="part12">
+          <div><br>
+            <ul>
+              <li><h5>MY ACCOUNT</h5></li>
+              <li><a href=""> Orders & Returns</a></li>
+              <li><a href="">Email Preferences</a></li>
+              <li><a href="">Account Settings</a></li>
+            </ul>
+          </div>
+          <div><br>
+            <ul>
+              <li><h5>LET US HELP</h5></li>
+              <li>
+                <a
+                  href="#"
+                  >Contact Customer Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  >Shipping Information</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  >Return Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  >International Help</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Accessibility</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div><br>
+            <ul>
+              <li><h5>COMPANY INFORMATION</h5></li>
+              <li>
+                <a href="about.html">About SubbiahFurniture™</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact Us</a>
+              </li>
+              <li><a href="#">Careers</a></li>
+              <li>
+                <a href="#"
+                  >Investor Relations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  >Sell Your Products</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Supply Chain Transparency</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div><br>
+            <ul>
+              <li><h5>MORE WAYS TO SHOP</h5></li>
+              <li>
+                <a href="#"
+                  >Tips & Ideas</a
+                >
+              </li>
+              <li><a href="#">Deals</a></li>
+              <li>
+                <a
+                  href="#"
+                  >Clearance</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  >New Arrivals</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="footersec">
+          <div>
+            <p>
+              © Copyright 2024, Subbiahfurniture.com®, Inc. <br />
+              Tirucendur Road, Meignanapuram, Thoothukudi, TN 628210 | 9443232108
+            </p>
+          </div>
+          <div
+            style="
+              width: 35%;
+              align-items: center;
+              display: flex;
+              justify-content: space-between;
+            "
+            class="lastfooter"
+          >
+            <p>Privacy Policy</p>
+            <p>Terms & Conditions</p>
+            <p>*Promotion Terms</p>
+            <p>Ship to:</p>
+          </div>
+        </div>
+      </footer>  
+    <!--Js-CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+
+    <!--AOS-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+     <script src="product.js"></script>
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

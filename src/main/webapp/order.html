@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .order-summary {
+            margin-top: 50px;
+            padding-left: 40%;
+            color: white;
+        }
+        P{
+            padding-left: 3%;
+            color: white;
+        }
+        body{ 
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(images/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    flex-direction: column;
+}
+    </style>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="footer.css"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+    <a class="navbar-brand" href="index.html">SUBBIAH FURNITURE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html" style="background-color: black;">HOME <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">CONTACT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="offers.html">OFFERS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="product.html">PRODUCTS</a>
+        </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="login.html">
+            <button class="btn custom-login-btn" id="btn" style="background-color: #ffcc00;">Login</button></a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+    <div class="container mt-5">
+    <div class="order-summary">
+        <h2>Order Summary</h2>
+        <p>Product Name: <span id="productName"></span></p>
+        <p>Product Price: <span id="productPrice"></span></p>
+    </div>
+    <div class="container mt-5">
+      <form action="finalpage.html">
+        <div class="jumbotron">
+          <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="product">Product:</label>
+            <select class="form-control" id="product" required>
+              <option value="" selected disabled>Select a product</option>
+              <option value="MasterDoor">Master Door</option>
+              <option value="Trundlebed">Trundle Bed</option>
+              <option value="PreciousShowCase">Precious ShowCase</option>
+              <option value="SolidCupBoard">Solid CupBoard</option>
+              <option value="MasterWindow">Master Window</option>
+              <option value="MasterWindows">Master Windows</option>
+              <option value="Walk-InCupboards">Walk-In Cupboards</option>
+              <option value="MasterShowCase">Master ShowCase</option>
+              <option value="DutchDoors">Dutch Doors</option>
+              <option value="LoveseatSofa">Loveseat Sofa</option>
+              <option value="FrenchDoors">French Doors</option>
+              <option value="woodenBed">wooden Bed</option>
+              <option value="Trible-HungWindows">Trible-Hung Windows</option>
+              <option value="Fittedwardrobes">Fitted wardrobes</option>
+              <option value="AwningWindow">Awning Window</option>
+              <option value="HingedDoors">Hinged Doors</option>
+              <option value="DinningTable">Dinning Table</option>
+              <option value="CoffeeTable">Coffee Table</option>
+              <option value="FreestandingShowcase">Freestanding Showcase</option>
+              <option value="WoodenSofa">Wooden Sofa</option>
+              <option value="SlidingDoor">Sliding Door</option>
+              <option value="SlidingWindow">Sliding Window</option>
+              <option value="WoodenSofaSet">Wooden SofaSet</option>
+              <option value="HingedwardrobesCupBoard">Hinged wardrobes CupBoard</option>
+              <option value="ReclinersSofa">Recliners Sofa</option>
+              <option value="PatioTable">Patio Table</option>
+              <option value="AjustableBed">Ajustable Bed</option>
+              <option value="DoubleBed">Double Bed</option>
+              <option value="Cabriolesofa">Cabriole sofa</option>
+              <option value="WoodShowCase">Wood ShowCase</option>
+              <option value="KingBed">King Bed</option>
+              <option value="WorkTable">Work Table</option>
+              <option value="Bulit-inShowcase">Bulit-in Showcase</option>
+              <option value="MattressBed">Mattress Bedr</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" class="form-control" id="quantity" placeholder="Enter quantity" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="comments">Address:</label>
+            <textarea class="form-control" id="comments" rows="3" placeholder="Enter your address" required></textarea>
+          </div>
+      
+          <button type="submit" class="btn btn-primary">Place Order</button>
+        </form></div>
+      </div></div>
+
+              <!-- 11th part -->
+<nav id="part11">
+  <div style="display: flex; align-items: center; margin-right: -15%">
+    <img
+      src="	https://ak1.ostkcdn.com/img/mxc/7722_EmailCoupon.svg"
+      alt="discounticon"
+    />
+  </div>
+  <div style="color: black;">
+    <h2>Take 10% Off Today*</h2>
+    <p style="color: black;">
+      Plus, get exclusive offers & savings! <br />
+      <span style="font-size: small"
+        >*Some Exclusions Apply.
+        <a
+          style="color: black"
+          href="#"
+          ><u>See Details </u></a
+        ></span
+      >
+    </p>
+  </div>
+</nav>
+<!-- 12th part -->
+<footer>
+  <div id="part12">
+    <div><br>
+      <ul>
+        <li><h5>MY ACCOUNT</h5></li>
+        <li><a href=""> Orders & Returns</a></li>
+        <li><a href="">Email Preferences</a></li>
+        <li><a href="">Account Settings</a></li>
+      </ul>
+    </div>
+    <div><br>
+      <ul>
+        <li><h5>LET US HELP</h5></li>
+        <li>
+          <a
+            href="#"
+            >Contact Customer Care</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            >Shipping Information</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            >Return Policy</a
+          >
+        </li>
+        <li>
+          <a
+            href="contact.html"
+            >International Help</a
+          >
+        </li>
+        <li>
+          <a href="#"
+            >Accessibility</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div><br>
+      <ul>
+        <li><h5>COMPANY INFORMATION</h5></li>
+        <li>
+          <a href="about.html">About SubbiahFurniture™</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact Us</a>
+        </li>
+        <li><a href="#">Careers</a></li>
+        <li>
+          <a href="#"
+            >Investor Relations</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            >Sell Your Products</a
+          >
+        </li>
+        <li>
+          <a href="#"
+            >Supply Chain Transparency</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div><br>
+      <ul>
+        <li><h5>MORE WAYS TO SHOP</h5></li>
+        <li>
+          <a href="#"
+            >Tips & Ideas</a
+          >
+        </li>
+        <li><a href="#">Deals</a></li>
+        <li>
+          <a
+            href="#"
+            >Clearance</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            >New Arrivals</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footersec">
+    <div>
+      <p>
+        © Copyright 2024, Subbiahfurniture.com®, Inc. <br/>
+        Tirucendur Road, Meignanapuram, Thoothukudi, TN 628210 | 9443232108
+      </p>
+    </div>
+    <div
+      style="
+        width: 35%;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      "
+      class="lastfooter"
+    >
+      <p>Privacy Policy</p>
+      <p>Terms & Conditions</p>
+      <p>*Promotion Terms</p>
+      <p>Ship to:</p>
+    </div>
+  </div>
+</footer>
+      
+      <!-- Bootstrap JS and Popper.js -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>      
+  
+    <script>
+        document.getElementById('productName').innerText = localStorage.getItem('productName');
+        document.getElementById('productPrice').innerText = localStorage.getItem('productPrice');
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+

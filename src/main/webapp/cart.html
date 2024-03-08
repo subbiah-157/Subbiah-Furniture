@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<style>
+#cartContainer{
+        position: absolute;
+        top:20%;
+        right:4%;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+        background-color: black;
+        width: 30%;
+        text-align: center;
+        background-image: url("");
+        background-color: brown;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+#cart{
+  color: white;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 15px;
+        width: 30%; 
+        text-align: center;
+}
+#total{
+  color: white;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 15px;
+        width: 30%;
+        text-align: center;
+}
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* ... (styles remain the same) */
+    </style>
+    <title>Simple Shopping Cart</title>
+</head>
+<body>
+<div id="cartContainer" class="container" style="display: none;">
+    <h2>Shopping Cart</h2>
+    <ul id="cart"></ul>
+    <p>Total: $<span id="total">0.00</span></p>
+</div>
+<script>
+function displayCart() {
+    const cartList = document.getElementById('cart');
+    const totalElement = document.getElementById('total');
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let total = 0;
+
+    // Clear previous cart
+    cartList.innerHTML = '';
+
+    // Populate the cart
+    cart.forEach((item, index) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+        cartList.appendChild(listItem);
+        total += item.price;
+    });
+
+    // Update total
+    totalElement.textContent = total.toFixed(2);
+}
+
+// Display cart when the cart page is loaded
+displayCart();
+</script>
+
+</body>
+</html>

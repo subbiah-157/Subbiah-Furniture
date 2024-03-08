@@ -1,0 +1,58 @@
+body{ 
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(images/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    flex-direction: column;
+    body {
+    background-color:white;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.card {
+    background:none;
+    border: none;
+}
+
+.card-header {
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Add more styles as needed */
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+    .container {
+        margin-top: 20px;
+    }
+}
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin: 10px 0px;
+    width:50%;
+    color: white;
+}
+.form-control{
+    margin: 10px 0px;
+    width: 100%;
+}
+h4{
+  text-align: center;
+}
